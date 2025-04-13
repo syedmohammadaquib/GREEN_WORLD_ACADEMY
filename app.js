@@ -42,6 +42,7 @@ app.use(express.static(path.join(__dirname, 'js')));
 app.use(express.static(path.join(__dirname, 'lib')));
 app.use(express.static(path.join(__dirname, 'scss')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
+app.use(express.static('public'));
 
 // ejs Template
 app.set('view engine', 'ejs');
@@ -75,6 +76,12 @@ app.get('/contact', (req, res) => {
 
     res.render('contact.ejs');
 });
+app.get('/google90471e8e78df8e34.html', (req, res) => {
+    res.sendFile(__dirname + '/public/google90471e8e78df8e34.html');
+});
+
+
+
 app.post('/authentication', (req, res) => {
 
     let { id, password } = req.body;
