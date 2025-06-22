@@ -79,7 +79,10 @@ app.get('/google90471e8e78df8e34.html', (req, res) => {
 
     res.sendFile(path.join(__dirname, 'views', '/google90471e8e78df8e34.html'));
 });
+app.get('/sitemap.xml', (req, res) => {
 
+    res.sendFile(path.join(__dirname, 'views', '/sitemap.xml'));
+});
 
 
 app.post('/authentication', (req, res) => {
