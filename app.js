@@ -83,7 +83,10 @@ app.get('/sitemap.xml', (req, res) => {
     res.type('application/xml'); // Set correct MIME type
     res.sendFile(path.join(__dirname, 'views', 'sitemap.xml'));
 });
-
+app.get('/green-world-academy(GREEN-bg).png', (req, res) => {
+    res.type('image/png');
+    res.sendFile(path.join(__dirname, 'img', 'green-world-academy(GREEN-bg).png'));
+});
 
 
 app.post('/authentication', (req, res) => {
