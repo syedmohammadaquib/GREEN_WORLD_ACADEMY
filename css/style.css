@@ -145,6 +145,7 @@ h6,
     visibility: hidden;
     transition: 0.5s;
   }
+
   .join {
     visibility: hidden;
     display: none;
@@ -242,7 +243,7 @@ h6,
   background-size: cover;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -420,8 +421,49 @@ h6,
 }
 
 /*** Footer ***/
+.footer {
+  position: relative;
+}
+
+.footer .footer-title {
+  margin-bottom: 1.25rem;
+  font-size: 1.35rem;
+  letter-spacing: 0.2px;
+}
+
+.footer .footer-text {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.footer .footer-contact {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 0.9rem;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer .footer-contact-address {
+  white-space: nowrap;
+}
+
+.footer .footer-contact-address span {
+  line-height: 1.4;
+}
+
+.footer .footer-contact i {
+  min-width: 18px;
+  margin-top: 4px;
+}
+
+.footer .footer-socials {
+  gap: 12px;
+}
+
 .footer .btn.btn-social {
-  margin-right: 5px;
+  margin-right: 0;
   width: 45px;
   height: 45px;
   display: flex;
@@ -432,68 +474,56 @@ h6,
   border-radius: 45px;
   transition: 0.3s;
 }
+
 .facebook:hover {
   border-color: #1877f2 !important;
   background: #1877f2;
 }
+
 .instagram:hover {
-  border-color: radial-gradient(
-      circle farthest-corner at 35% 90%,
+  border-color: radial-gradient(circle farthest-corner at 35% 90%,
       #fec564,
-      transparent 50%
-    ),
+      transparent 50%),
     radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
     radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
-    radial-gradient(
-      ellipse farthest-corner at 20% -50%,
+    radial-gradient(ellipse farthest-corner at 20% -50%,
       #5258cf,
-      transparent 50%
-    ),
+      transparent 50%),
     radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
-    radial-gradient(
-      ellipse farthest-corner at 60% -20%,
+    radial-gradient(ellipse farthest-corner at 60% -20%,
       #893dc2,
-      transparent 50%
-    ),
+      transparent 50%),
     radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
-    linear-gradient(
-      #6559ca,
+    linear-gradient(#6559ca,
       #bc318f 30%,
       #e33f5f 50%,
       #f77638 70%,
-      #fec66d 100%
-    ) !important;
-  background: radial-gradient(
-      circle farthest-corner at 35% 90%,
+      #fec66d 100%) !important;
+  background: radial-gradient(circle farthest-corner at 35% 90%,
       #fec564,
-      transparent 50%
-    ),
+      transparent 50%),
     radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
     radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
-    radial-gradient(
-      ellipse farthest-corner at 20% -50%,
+    radial-gradient(ellipse farthest-corner at 20% -50%,
       #5258cf,
-      transparent 50%
-    ),
+      transparent 50%),
     radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
-    radial-gradient(
-      ellipse farthest-corner at 60% -20%,
+    radial-gradient(ellipse farthest-corner at 60% -20%,
       #893dc2,
-      transparent 50%
-    ),
+      transparent 50%),
     radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
-    linear-gradient(
-      #6559ca,
+    linear-gradient(#6559ca,
       #bc318f 30%,
       #e33f5f 50%,
       #f77638 70%,
-      #fec66d 100%
-    );
+      #fec66d 100%);
 }
+
 .whatsapp:hover {
   border-color: #25d366 !important;
   background: #25d366;
 }
+
 .linkedin:hover {
   border-color: #0077b5 !important;
   background: #0077b5;
@@ -501,13 +531,35 @@ h6,
 
 .footer .btn.btn-link {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0;
   padding: 0;
   text-align: left;
   font-size: 16px;
   font-weight: normal;
   text-transform: capitalize;
   transition: 0.3s;
+}
+
+.footer .footer-links {
+  gap: 0.4rem;
+}
+
+.footer .footer-note {
+  margin-bottom: 1rem;
+}
+
+.footer .footer-note-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.footer .footer-note-item {
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .footer .btn.btn-link::before {
@@ -529,9 +581,79 @@ h6,
 }
 
 .footer .copyright {
-  padding: 25px 0;
+  padding: 16px 0 22px;
   font-size: 15px;
   border-top: 1px solid rgba(256, 256, 256, 0.1);
+}
+
+.footer .footer-credit {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  animation: footerCreditFloat 4.5s ease-in-out infinite;
+}
+
+.footer .footer-credit-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+}
+
+.footer .footer-credit-name {
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-style: italic;
+  font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  position: relative;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer .footer-credit-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  transform: scaleX(0.75);
+  transform-origin: center;
+  opacity: 0.8;
+}
+
+.footer .footer-credit-name:hover {
+  color: var(--primary) !important;
+  transform: translateY(-1px) scale(1.02);
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.15);
+}
+
+.footer .footer-credit-name:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes footerCreditFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
 .footer .copyright a {
