@@ -94,7 +94,7 @@ h6,
 
 /*** Navbar ***/
 .navbar .navbar-nav .nav-link {
-  padding: 30px 15px;
+  padding: 18px 12px;
   color: var(--dark);
   font-weight: 500;
   outline: none;
@@ -106,8 +106,8 @@ h6,
 }
 
 .navbar.sticky-top {
-  top: -100px;
-  transition: 0.5s;
+  top: 0;
+  transition: 0.3s;
 }
 
 .navbar .dropdown-toggle::after {
@@ -644,12 +644,76 @@ h6,
 }
 
 .logo_gwa {
-  height: 90px;
-  width: 90px;
+  height: 84px;
+  width: auto;
+  margin-right: 12px;
 }
 
 .containersss {
   max-width: 500px;
+}
+
+/* Header / Brand typography tweaks */
+.navbar {
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-brand .diff {
+  font-family: 'Bebas Neue', 'Heebo', 'Segoe UI', Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1;
+}
+
+@media (min-width: 1200px) {
+  .navbar-brand .diff {
+    font-size: 46px;
+  }
+}
+
+.navbar-brand .diff span {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: none;
+}
+
+/* Override inline span colours so the logo looks consistent */
+.navbar-brand .diff span:nth-of-type(1) {
+  color: #28a745 !important;
+}
+
+/* GREEN */
+.navbar-brand .diff span:nth-of-type(2) {
+  color: #004aad !important;
+}
+
+/* WORLD */
+.navbar-brand .diff span:nth-of-type(3) {
+  color: #5a282b !important;
+}
+
+/* ACADEMY */
+
+.logo_gwa {
+  height: 84px;
+  width: auto;
+  margin-right: 12px;
+}
+
+/* small visual polish */
+.navbar-brand .diff img {
+  vertical-align: middle;
 }
 
 .onb-embed-responsive {
@@ -680,4 +744,18 @@ h6,
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+/* Keep navbar items on one line and prevent wrapping */
+.navbar .navbar-nav {
+  flex-wrap: nowrap;
+}
+
+.navbar .navbar-nav .nav-link {
+  white-space: nowrap;
+}
+
+/* Prevent brand from shrinking which can push nav items to new line */
+.navbar-brand .diff {
+  flex-shrink: 0;
 }
