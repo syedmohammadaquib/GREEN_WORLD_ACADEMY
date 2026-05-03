@@ -204,6 +204,10 @@ h6,
     font-size: 30px;
     font-weight: 600;
   }
+
+  .page-header+.container-xxl.py-5 {
+    padding-top: 1.5rem !important;
+  }
 }
 
 .header-carousel .owl-nav {
@@ -241,6 +245,15 @@ h6,
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(carousel_1.jpg) center center no-repeat;
   background-size: cover;
+  margin-bottom: 0 !important;
+}
+
+.page-header+.container-xxl.py-5 {
+  padding-top: 2.25rem !important;
+}
+
+.page-header+.container-xxl.py-5 .donation-hero {
+  padding-top: 0;
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
